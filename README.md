@@ -8,7 +8,8 @@ Ce dépôt inclut la configuration pour les outils suivants :
 
 - **Kitty** (Terminal)
 - **Wofi** (Outil de barre de recherche d'application)
-- **Zsh** (Utilisé par le script wofi pour l'init)
+- **HyprShot** (Captures d'écran)
+- **Yay** (Outil d'installation de paquet AUR)
 
 ### Prérequis
 
@@ -39,4 +40,6 @@ cd ~/dotfiles
 
 - Crée les dossiers nécessaires dans votre répertoire ~/.config s'ils n'existent pas.
 
-- Applique les configurations de via stow.
+- Applique les configurations via stow.
+
+- Rend exécutable les scripts utilisés par le fichier configuration d'hyperland.

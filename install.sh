@@ -3,7 +3,23 @@
 set -e  # Arrête le script en cas d’erreur
 
 echo "📦 Installation des paquets de base..."
-sudo pacman -Syu --needed git stow kitty wget curl wofi zsh --noconfirm
+sudo pacman -Syu --needed git stow kitty wget curl wofi --noconfirm
+
+# Vérifier si yay est installé, sinon l'installer
+if ! command -v yay &> /dev/null; then
+  echo "🔧 yay n'est pas installé. Installation de yay..."
+  sudo pacman -S yay --noconfirm
+else
+  echo "✅ yay est déjà installé."
+fi
+
+# Installer Hyprshot via yay (si pas déjà installé)
+if ! command -v hyprshot &> /dev/null; then
+  echo "🔧 Installation de Hyprshot..."
+  yay -S hyprshot --noconfirm
+else
+  echo "✅ Hyprshot est déjà installé."
+fi
 
 echo "📁 Création du dossier ~/.config si nécessaire..."
 mkdir -p ~/.config
@@ -29,7 +45,7 @@ apply_config "hyprland"
 
 # Rendre les scripts exécutables si présents
 if [ -d "hyprland/.config/hypr/scripts" ]; then
-  echo "⚙️  Mise en exécutable des scripts Hyprland..."
+  echo "⚙️ Mise en exécutable des scripts Hyprland..."
   chmod +x hyprland/.config/hypr/scripts/*.sh
   echo "- Scripts rendus exécutables ✅"
 fi
@@ -40,5 +56,6 @@ echo "   - Kitty (terminal)"
 echo "   - Wofi (application launcher avec script)"
 echo "   - Zsh (shell utilisé pour lancer wofi via script)"
 echo "   - Hyprland (si installé)"
+echo "   - Hyprshot (si installé)"
 echo ""
 echo "💡 Astuce : Lancez 'wofi --show run' pour tester votre menu personnalisé."

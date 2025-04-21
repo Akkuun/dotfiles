@@ -7,9 +7,8 @@ Ce dépôt contient mes configurations personnelles pour plusieurs outils et app
 Ce dépôt inclut la configuration pour les outils suivants :
 
 - **Kitty** (Terminal)
-- **Zsh** (Shell) – **Non encore inclus dans le script d'installation, mais peut être ajouté à l'avenir**
-- **Neovim** (Éditeur de texte) – **Non encore inclus dans le script d'installation, mais peut être ajouté à l'avenir**
-- **Tmux** (Multiplexer de terminal) – **Non encore inclus dans le script d'installation, mais peut être ajouté à l'avenir**
+- **Wofi** (Outil de barre de recherche d'application)
+- **Zsh** (Utilisé par le script wofi pour l'init)
 
 ### Prérequis
 
@@ -36,8 +35,8 @@ cd ~/dotfiles
 
 ### Ce que fait le script :
 
-- Installe les paquets nécessaires : git, stow, kitty, wget, curl.
+- Installe les paquets nécessaires : git, stow, kitty, wget, curl,ect..
 
 - Crée les dossiers nécessaires dans votre répertoire ~/.config s'ils n'existent pas.
 
-- Applique la configuration de Kitty via stow.
+- Applique les configurations de via stow.

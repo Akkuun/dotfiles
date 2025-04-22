@@ -21,6 +21,14 @@ else
   echo "✅ Hyprshot est déjà installé."
 fi
 
+# Installer Hyprpaper via yay (si pas déjà installé)
+if ! command -v hyprpaper &> /dev/null; then
+  echo "🖼️ Installation de Hyprpaper..."
+  yay -S hyprpaper --noconfirm
+else
+  echo "✅ Hyprpaper est déjà installé."
+fi
+
 echo "📁 Création du dossier ~/.config si nécessaire..."
 mkdir -p ~/.config
 
@@ -42,6 +50,7 @@ apply_config() {
 apply_config "kitty"
 apply_config "wofi"
 apply_config "hyprland"
+apply_config "hyprpaper"  
 
 # Rendre les scripts exécutables si présents
 if [ -d "hyprland/.config/hypr/scripts" ]; then
@@ -50,12 +59,28 @@ if [ -d "hyprland/.config/hypr/scripts" ]; then
   echo "- Scripts rendus exécutables ✅"
 fi
 
+# Créer un lien symbolique pour le dossier wallpapers s'il n'existe pas
+if [ ! -d ~/Images ]; then
+  mkdir -p ~/Images
+fi
+
+if [ ! -e ~/Images/wallpapers ]; then
+  ln -s ~/dotfiles/hyprpaper/wallpapers ~/Images/wallpapers
+  echo "🔗 Lien wallpapers créé dans ~/Images ✅"
+else
+  echo "✅ Le lien ~/Images/wallpapers existe déjà."
+fi
 echo ""
 echo "✅ Setup terminé ! Les applications suivantes sont prêtes à l'emploi :"
 echo "   - Kitty (terminal)"
 echo "   - Wofi (application launcher avec script)"
 echo "   - Zsh (shell utilisé pour lancer wofi via script)"
 echo "   - Hyprland (si installé)"
-echo "   - Hyprshot (si installé)"
+echo "   - Hyprshot (outil de capture)"
+echo "   - Hyprpaper (gestionnaire de fond d'écran)"
 echo ""
-echo "💡 Astuce : Lancez 'wofi --show run' pour tester votre menu personnalisé."
+echo "🖼️ Vérifiez que votre hyprpaper.conf contient les bons écrans avec :"
+echo "   ➤ hyprctl monitors"
+echo "   ➤ puis ajoutez dans hyprpaper.conf :"
+echo "     wallpaper = NOM-ECRAN,/chemin/vers/fond.jpg"
+echo ""

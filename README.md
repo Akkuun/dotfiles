@@ -10,6 +10,7 @@ Ce dépôt inclut la configuration pour les outils suivants :
 - **Wofi** (Outil de barre de recherche d'application)
 - **HyprShot** (Captures d'écran)
 - **Yay** (Outil d'installation de paquet AUR)
+- **Hyprpaper** (Outil de gestion de fond d'écran)
 
 ### Prérequis
 

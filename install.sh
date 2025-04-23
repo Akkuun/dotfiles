@@ -3,7 +3,7 @@
 set -e  # Arrête le script en cas d’erreur
 
 echo "📦 Installation des paquets de base..."
-sudo pacman -Syu --needed git stow kitty wget curl wofi --noconfirm
+sudo pacman -Syu --needed git stow kitty wget curl wofi vesktop-bin --noconfirm
 
 # Vérifier si yay est installé, sinon l'installer
 if ! command -v yay &> /dev/null; then

@@ -12,6 +12,7 @@ Ce dépôt inclut la configuration pour les outils suivants :
 - **Yay** (Outil d'installation de paquet AUR)
 - **Hyprpaper** (Outil de gestion de fond d'écran)
 - **Vesktop** (Discord pour Arch)
+- **hellwal** (Modification de la palette de couleur)
 
 ### Prérequis
 

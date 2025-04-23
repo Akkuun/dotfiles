@@ -16,5 +16,8 @@ actual_value=$(grep "^$actual_var" "$conf" | cut -d= -f2 | xargs)
 
 ./dotfiles/hellwal/hellwal  -i "~/dotfiles/hyprpaper/wallpapers/$actual_value"
 
+#colors are exported in ~/.cache/hellwal/variables.sh 
+
+
 hyprctl reload
 

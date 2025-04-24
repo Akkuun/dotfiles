@@ -54,7 +54,7 @@ Voici la pipeline concernant la palette automatique si jamais ça marche pas :
 
 - 1) supprimer les dossiers hellwal dans ~/.config/hellwal et ~/.cache/hellwal
 
-- 2) recréer un dossier dans ~/.config/hellwal
+- 2) recréer un dossier dans ~/.config/hellwal  ~/.config/hellwal/templates
 
 - 3) dans le dossier hellwal dans ~/dotfiles/hellwal ( cp -r templates ~/.config/hellwal puis make)
 

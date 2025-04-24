@@ -3,7 +3,7 @@
 set -e  # Arrête le script en cas d’erreur
 
 echo "📦 Installation des paquets de base..."
-sudo pacman -Syu --needed git stow kitty wget curl wofi vesktop-bin --noconfirm
+sudo pacman -Syu --needed git stow kitty wget curl wofi vesktop-bin waybar --noconfirm
 
 # Vérifier si yay est installé, sinon l'installer
 if ! command -v yay &> /dev/null; then
@@ -50,7 +50,8 @@ apply_config() {
 apply_config "kitty"
 apply_config "wofi"
 apply_config "hyprland"
-apply_config "hyprpaper"  
+apply_config "hyprpaper" 
+apply_config "waybar" 
 
 # Rendre les scripts exécutables si présents
 if [ -d "hyprland/.config/hypr/scripts" ]; then

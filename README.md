@@ -46,3 +46,16 @@ cd ~/dotfiles
 - Applique les configurations via stow.
 
 - Rend exécutable les scripts utilisés par le fichier configuration d'hyperland.
+
+
+### Palette automatique bug
+
+Voici la pipeline concernant la palette automatique si jamais ça marche pas :
+
+- 1) supprimer les dossiers hellwal dans ~/.config/hellwal et ~/.cache/hellwal
+
+- 2) recréer un dossier dans ~/.config/hellwal
+
+- 3) dans le dossier hellwal dans ~/dotfiles/hellwal ( cp -r templates ~/.config/hellwal puis make)
+
+- 4) une fois que l'executable est mis en place, voici comment ça marche à l'exécution. Hyprpaper met le bon fond d'écran basé sur le path fourni dans hyprpaper.conf ensuite un script applyPalette va executabler hellwal pour correspondre au bon fond et va creer les fichiers de cache. Enfin genereteKittyColorConf va crer le bon fichier de conf pour les couleurs de kitty et le mettre dans les fichiers de conf de kitty

@@ -1,4 +1,4 @@
-voici mon sscript : #!/bin/bash
+#!/bin/bash
 
 #Adapting the palette based in ActualPath Image
 
@@ -16,8 +16,13 @@ actual_value=$(grep "^$actual_var" "$conf" | cut -d= -f2 | xargs)
 
 ./dotfiles/hellwal/hellwal  -i "~/dotfiles/hyprpaper/wallpapers/$actual_value"
 
-#colors are exported in ~/.cache/hellwal/variables.sh 
+#colors are exported in ~/.cache/hellwal/variables.sh for css
+#export in ~/.cache/hellwal/hyprland-colors.conf 
 
+source ~/.cache/hellwal/variables.sh
+
+
+#echo $background
 
 hyprctl reload
 

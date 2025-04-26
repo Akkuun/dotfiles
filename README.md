@@ -15,6 +15,11 @@ Ce dépôt inclut la configuration pour les outils suivants :
 - **hellwal** (Modification de la palette de couleur)
 - **Waybar** (Barre du haut)
 - **Neofetch** (Outil de récupération d'informations système)
+- **imagemagick** (Outil de manipulation d'images)
+- **pipewire** (Serveur multimédia moderne pour audio/vidéo sous Linux)
+- **pipewire-pulse** (pipewire ++ )
+- **wireplumber** (Compatibilité PulseAudio au-dessus de Pipewire)
+- **xdg-desktop-portal-hyprland** (ScreenSharing)
 
 ### Prérequis
 

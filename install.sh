@@ -3,7 +3,7 @@
 set -e  # Arrête le script en cas d’erreur
 
 echo "📦 Installation des paquets de base..."
-sudo pacman -Syu --needed git stow kitty neofetch wget curl wofi vesktop-bin waybar --noconfirm
+sudo pacman -Syu --needed git stow kitty neofetch wget curl wofi vesktop-bin imagemagick waybar  pipewire pipewire-pulse wireplumber xdg-desktop-portal-hyprland --noconfirm
 
 # Vérifier si yay est installé, sinon l'installer
 if ! command -v yay &> /dev/null; then

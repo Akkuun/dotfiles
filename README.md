@@ -14,6 +14,7 @@ Ce dépôt inclut la configuration pour les outils suivants :
 - **Vesktop** (Discord pour Arch)
 - **hellwal** (Modification de la palette de couleur)
 - **Waybar** (Barre du haut)
+- **Neofetch** (Outil de récupération d'informations système)
 
 ### Prérequis
 

@@ -1,12 +1,13 @@
-/* import waybar-color.css
-@import "/home/mathis/dotfiles/hellwal/templates/waybar-colors.css";
-*/
+/* import waybar-color.css*/
+@import "/home/mathis/.cache/hellwal/waybar-colors.css";
 
 
+/*
 @define-color foreground #eff0f1;
 @define-color foreground-inactive #7f8c8d;
 @define-color background #232629;
 @define-color background-alt #31363b;
+*/
 
 * {
     font-family: Mononoki Nerd Font;
@@ -26,11 +27,11 @@
 }
 
 #workspaces button.empty {
-    color: @foreground-inactive;
+    color: @foreground;
 }
 
 #workspaces button.active {
-    background-color: @background-alt;
+    background-color: @foreground;
     border-radius: 3px;
 }
 
@@ -52,3 +53,6 @@
 #network {
     margin-right: 0.8em;
 }
+sub {
+    padding-left: 0.5em; /* Adjust the padding as needed */
+   }

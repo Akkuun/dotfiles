@@ -1,46 +1,44 @@
 {
-    
     "layer": "top",
     "position": "top",
-    "height": 24,
+    "height": 10,
     "spacing": 5,
 
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["group/bat", "group/net", "tray"],
-
-   
-
-    "group/bat": {
-        "orientation": "horizontal",
-        "modules": ["battery", "backlight"]
-    },
+    "modules-right": ["group/net"],
 
     "group/net": {
+        "on-click": "activate",
         "orientation": "horizontal",
-        "modules": ["hyprland/language", "network", "bluetooth"]
+        "modules": ["network", "bluetooth"],
+        "padding": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0
+        }
     },
+
     "hyprland/workspaces": {
         "format": "<sub>{icon}</sub>\n{windows}",
-        "format-window-separator": "",
-        "window-rewrite-default": "", // Default icon for unmatched windows
+        "format-window-separator": "\n",
+        "window-rewrite-default": "",
         "window-rewrite": {
-            "title<.*youtube.*>": "\uf16a", // Windows whose titles contain "youtube"
-            "class<firefox>": "\ue745", // Windows whose classes are "firefox"
-            "class<firefox> title<.*github.*>": "\ue709", // Firefox windows with "github" in the title
-            "code": "\udb81\ude10", // Matches "code" in class or title (e.g., Visual Studio Code)
-            "kitty": "\uea85", // Terminal (kitty)
-            "discord": "\uf1ff" // Discord
+            "title<.*youtube.*>": "\uf16a",
+            "class<firefox>": "\ue745",
+            "class<firefox> title<.*github.*>": "\ue709",
+            "code": "\udb81\ude10",
+            "kitty": "\uea85",
+            "discord": "\uf1ff"
         },
         "icon-size": 50,
         "on-click": "activate"
-    },  
-    "clock": {
-        "format": "{:%d.%m.%Y | %H:%M}"
     },
 
-
-
+    "clock": {
+        "format": "{:%d.%m | %H:%M}"
+    },
 
     "network": {
         "format": "",
@@ -60,14 +58,5 @@
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
-    },
-
-    "hyprland/language": {
-        "format": "{short}"
-    },
-
-    "tray": {
-        "icon-size": 16,
-        "spacing": 16
     }
 }

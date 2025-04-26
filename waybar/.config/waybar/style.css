@@ -1,3 +1,8 @@
+/* import waybar-color.css
+@import "/home/mathis/dotfiles/hellwal/templates/waybar-colors.css";
+*/
+
+
 @define-color foreground #eff0f1;
 @define-color foreground-inactive #7f8c8d;
 @define-color background #232629;
@@ -5,14 +10,14 @@
 
 * {
     font-family: Mononoki Nerd Font;
-    font-size: 17px;
+    font-size: 15px;
     padding: 0;
     margin: 0;
 }
 
 #waybar {
     color: @foreground;
-    background-color: @background;
+    background-color: transparent;
 }
 
 #workspaces button {

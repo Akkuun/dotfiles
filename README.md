@@ -20,6 +20,8 @@ Ce dépôt inclut la configuration pour les outils suivants :
 - **pipewire-pulse** (pipewire ++ )
 - **wireplumber** (Compatibilité PulseAudio au-dessus de Pipewire)
 - **xdg-desktop-portal-hyprland** (ScreenSharing)
+- **ttf-nerd-fonts-symbols** (Symboles)
+- **unzip** (Dezip)
 
 ### Prérequis
 

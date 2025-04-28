@@ -22,6 +22,8 @@ Ce dépôt inclut la configuration pour les outils suivants :
 - **xdg-desktop-portal-hyprland** (ScreenSharing)
 - **ttf-nerd-fonts-symbols** (Symboles)
 - **unzip** (Dezip)
+- **bluez bluez-utils blueman** (Gui Bluetooth)
+- **networkmanager network-manager-applet** (Gui Wifi)
 
 ### Prérequis
 
@@ -70,3 +72,11 @@ Voici la pipeline concernant la palette automatique si jamais ça marche pas :
 - 4) une fois que l'executable est mis en place, voici comment ça marche à l'exécution. Hyprpaper met le bon fond d'écran basé sur le path fourni dans hyprpaper.conf ensuite un script applyPalette va executabler hellwal pour correspondre au bon fond et va creer les fichiers de cache. Enfin genereteKittyColorConf va crer le bon fichier de conf pour les couleurs de kitty et le mettre dans les fichiers de conf de kitty
 
 Si jamais ça marche pas -> en gros l'idée c'est de récrée pour chaque image les fichiers de cache et config avec ./hellwal à la main. Après les scripts marcherons une fois que les fichiers seront créé dans le cache une première fois.
+
+### Services
+
+Faire attention à bien lancer les services :
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
+sudo systemctl enable NetworkManager
+sudo systemctl start NetworkManager

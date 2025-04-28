@@ -1,23 +1,77 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 10,
+    "height": 47,
     "spacing": 5,
 
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["group/net"],
+    "modules-right": ["bluetooth", "group/system" ],
 
-    "group/net": {
-        "on-click": "activate",
-        "orientation": "horizontal",
-        "modules": ["network", "bluetooth"],
-        "padding": {
-            "top": 0,
-            "bottom": 0,
-            "left": 0,
-            "right": 0
-        }
+    "group/system": {
+    "orientation": "horizontal",
+    "modules": [ "tray", "pulseaudio/slider"],
+    "spacing": 15, 
+    "padding": {
+        "top": 0,
+        "bottom": 0,
+        "left": 5,
+        "right": 5
+    },
+    "on-click": "activate"
+},
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% ",
+        "format-muted": "eb24",
+        "format-icons": {
+            "headphone": "\uf025",
+            "hands-free": "",
+            "headset": "\udb80\udece"
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+
+    "network": {
+        "format": "",
+        "format-ethernet": "\udb83\udc9d ",
+        "format-wifi": "{icon} ",
+        "format-disconnected": "\udb83\udc9c ",
+        "format-icons": [
+            "\udb82\udd2f",
+            "\udb82\udd1f",
+            "\udb82\udd22",
+            "\udb82\udd25",
+            "\udb82\udd28"
+        ],
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "networkmanager_dmenu"
+    },
+
+    "bluetooth": {
+        "format": "\udb80\udcaf",
+        "format-disabled": "\uf293",
+        "format-connected": "\uf293",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "blueman-manager"
     },
 
     "hyprland/workspaces": {
@@ -38,25 +92,5 @@
 
     "clock": {
         "format": "{:%d.%m | %H:%M}"
-    },
-
-    "network": {
-        "format": "",
-        "format-ethernet": "\udb83\udc9d ",
-        "format-wifi": "{icon} ",
-        "format-disconnected": "\udb83\udc9c ",
-        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
-        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "{ifname}",
-        "tooltip-format-disconnected": "Disconnected"
-    },
-
-    "bluetooth": {
-        "format": "\uf293",
-        "format-disabled": "\uf293",
-        "format-connected": "\uf293",
-        "tooltip-format": "{controller_alias}\t{controller_address}",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
     }
 }

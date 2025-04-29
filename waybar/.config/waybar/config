@@ -10,7 +10,7 @@
 
     "group/system": {
     "orientation": "horizontal",
-    "modules": [ "tray", "pulseaudio/slider"],
+    "modules": [ "tray", "pulseaudio/slider","pulseaudio"],
     "spacing": 15, 
     "padding": {
         "top": 0,
@@ -42,7 +42,13 @@
         },
         "scroll-step": 1,
         "on-click": "pavucontrol",
-        "ignored-sinks": ["Easy Effects Sink"]
+        "ignored-sinks": ["Easy Effects Sink"],
+        "padding": {
+            "top": 0,
+            "bottom": 0,
+            "left": 5,
+            "right": 5
+        }
     },
 
     "network": {
@@ -65,7 +71,7 @@
     },
 
     "bluetooth": {
-        "format": "\udb80\udcaf",
+        "format": "\udb80\udcaf ",
         "format-disabled": "\uf293",
         "format-connected": "\uf293",
         "tooltip-format": "{controller_alias}\t{controller_address}",
@@ -84,13 +90,35 @@
             "class<firefox> title<.*github.*>": "\ue709",
             "code": "\udb81\ude10",
             "kitty": "\uea85",
-            "discord": "\uf1ff"
+            "discord": "\uf1ff",
+            "class<jetbrains-studio>": "\uf17b"
         },
         "icon-size": 50,
         "on-click": "activate"
     },
 
-    "clock": {
-        "format": "{:%d.%m | %H:%M}"
+   "clock": {
+    "format": "{:%H:%M}  ",
+    "tooltip-format": "\n<span font_family='Relaxed Typing Mono JP' size='9000'>{calendar}</span>",
+    "calendar": {
+        "mode": "year",
+        "mode-mon-col": 3,
+        "on-scroll": 1,
+        "format": {
+           "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ffffff'><b>{}</b></span>",
+                              "weeks":      "<span color='#ffffff'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffffff'><b>{}</b></span>",
+                              "today":      "<span color='#f54242'><b><u>{}</u></b></span>"
+        }
+    },
+    "actions": {
+        "on-click-right": "mode",
+        "on-click-forward": "tz_up",
+        "on-click-backward": "tz_down",
+        "on-scroll-up": "shift_up",
+        "on-scroll-down": "shift_down"
     }
+}
+
 }

@@ -1,3 +1,6 @@
+
+@import "/home/mathis/.cache/hellwal/waybar-colors.css";
+/*
 @define-color	rosewater  #f5e0dc;
 @define-color	rosewater-rgb  rgb(245, 224, 220);
 @define-color	flamingo  #f2cdcd;
@@ -50,7 +53,7 @@
 @define-color	mantle-rgb  rgb(24, 24, 37);
 @define-color	crust  #11111b;
 @define-color	crust-rgb  rgb(17, 17, 27);
-
+*/
 * {
   font-family: 'Inconsolata Nerd Font', monospace;
   font-size: 14px;
@@ -60,9 +63,9 @@
 window {
   margin: 0px;
   padding: 10px;
-  border: 0.16em solid @lavender;
-  border-radius: 0.5em;
-  background-color: @base;
+  border: 0.16em solid @background;
+  border-radius: 1em;
+  background-color: transparent;
   animation: slideIn 0.5s ease-in-out both;
 }
 
@@ -82,7 +85,7 @@ window {
   margin: 5px;
   padding: 10px;
   border: none;
-  background-color: @base;
+  background-color: @border;
   animation: fadeIn 0.5s ease-in-out both;
   border-radius: 0.5em;
 }
@@ -103,7 +106,7 @@ window {
   margin: 5px;
   padding: 10px;
   border: none;
-  background-color: @base;
+  background-color: @color8;
 }
 
 /* Scroll */

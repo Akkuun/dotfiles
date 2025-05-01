@@ -1,4 +1,10 @@
 {
-    "files.autoSave": "afterDelay",
-    "editor.mouseWheelZoom": true
+    "files.autoSave": "afterDelay", // Sauvegarde automatique après un délai
+    "editor.mouseWheelZoom": true, // Zoom avec la molette de la souris
+    "workbench.colorTheme": "Night Owl", // Thème de couleur (Night Owl)
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.formatOnPaste": true,
+    "workbench.sideBar.location": "right", // Thème d'icônes (Material)
 }

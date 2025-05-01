@@ -3,34 +3,27 @@
     "position": "top",
     "height": 47,
     "spacing": 5,
-
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["bluetooth", "group/system" ],
-
-    "group/system": {
-    "orientation": "horizontal",
-    "modules": [ "tray", "pulseaudio/slider","pulseaudio"],
-    "spacing": 15, 
-    "padding": {
-        "top": 0,
-        "bottom": 0,
-        "left": 5,
-        "right": 5
-    },
-    "on-click": "activate"
-},
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "bluetooth",
+        "tray",
+        "pulseaudio/slider",
+        "pulseaudio"
+    ],
     "tray": {
         "icon-size": 16,
         "spacing": 10
     },
-
     "pulseaudio/slider": {
         "min": 0,
         "max": 100,
         "orientation": "horizontal"
     },
-
     "pulseaudio": {
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% ",
@@ -42,15 +35,10 @@
         },
         "scroll-step": 1,
         "on-click": "pavucontrol",
-        "ignored-sinks": ["Easy Effects Sink"],
-        "padding": {
-            "top": 0,
-            "bottom": 0,
-            "left": 5,
-            "right": 5
-        }
+        "ignored-sinks": [
+            "Easy Effects Sink"
+        ]
     },
-
     "network": {
         "format": "",
         "format-ethernet": "\udb83\udc9d ",
@@ -69,7 +57,6 @@
         "max-length": 50,
         "on-click": "networkmanager_dmenu"
     },
-
     "bluetooth": {
         "format": "\udb80\udcaf ",
         "format-disabled": "\uf293",
@@ -79,7 +66,6 @@
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "on-click": "blueman-manager"
     },
-
     "hyprland/workspaces": {
         "format": "<sub>{icon}</sub>\n{windows}",
         "format-window-separator": "\n",
@@ -96,29 +82,27 @@
         "icon-size": 50,
         "on-click": "activate"
     },
-
-   "clock": {
-    "format": "{:%H:%M}  ",
-    "tooltip-format": "\n<span font_family='Relaxed Typing Mono JP' size='9000'>{calendar}</span>",
-    "calendar": {
-        "mode": "year",
-        "mode-mon-col": 3,
-        "on-scroll": 1,
-        "format": {
-           "months":     "<span color='#ffead3'><b>{}</b></span>",
-                              "days":       "<span color='#ffffff'><b>{}</b></span>",
-                              "weeks":      "<span color='#ffffff'><b>W{}</b></span>",
-                              "weekdays":   "<span color='#ffffff'><b>{}</b></span>",
-                              "today":      "<span color='#f54242'><b><u>{}</u></b></span>"
+    "clock": {
+        "format": "{:%H:%M}  ",
+        "tooltip-format": "\n<span font_family='Relaxed Typing Mono JP' size='9000'>{calendar}</span>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ffffff'><b>{}</b></span>",
+                "weeks": "<span color='#ffffff'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffffff'><b>{}</b></span>",
+                "today": "<span color='#f54242'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
         }
-    },
-    "actions": {
-        "on-click-right": "mode",
-        "on-click-forward": "tz_up",
-        "on-click-backward": "tz_down",
-        "on-scroll-up": "shift_up",
-        "on-scroll-down": "shift_down"
     }
-}
-
 }

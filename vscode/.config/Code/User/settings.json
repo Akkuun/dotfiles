@@ -6,5 +6,7 @@
     "editor.cursorBlinking": "expand",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.formatOnPaste": true,
-    "workbench.sideBar.location": "right", // Thème d'icônes (Material)
+    "workbench.sideBar.location": "right",
+    "debug.onTaskErrors": "abort",
+    "editor.minimap.enabled": false, // Thème d'icônes (Material)
 }

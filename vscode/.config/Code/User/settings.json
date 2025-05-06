@@ -8,5 +8,8 @@
     "editor.formatOnPaste": true,
     "workbench.sideBar.location": "right",
     "debug.onTaskErrors": "abort",
-    "editor.minimap.enabled": false, // Thème d'icônes (Material)
+    "editor.minimap.enabled": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
+    "explorer.confirmDelete": false, // Thème d'icônes (Material)
 }

@@ -25,6 +25,8 @@ Ce dépôt inclut la configuration pour les outils suivants :
 - **bluez bluez-utils blueman** (Gui Bluetooth)
 - **networkmanager network-manager-applet** (Gui Wifi)
 - **Vscode** (Vs code et ses extensions)
+- **Nemo** (gestionnaire de fichier)
+- **mpv** (lecteur de fichier multimédia) 
 
 ### Prérequis
 

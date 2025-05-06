@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 47,
+    "height": 25,
     "spacing": 5,
     "modules-left": [
         "hyprland/workspaces"
@@ -67,8 +67,9 @@
         "on-click": "blueman-manager"
     },
     "hyprland/workspaces": {
-        "format": "<sub>{icon}</sub>\n{windows}",
-        "format-window-separator": "\n",
+//        "format": "<sub>{icon}</sub>\n{windows}",
+        "format": "{windows}",
+        //"format-window-separator": "\n",
         "window-rewrite-default": "",
         "window-rewrite": {
             "title<.*youtube.*>": "\uf16a",

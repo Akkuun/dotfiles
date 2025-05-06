@@ -29,7 +29,7 @@
 }
 
 #workspaces button.active {
-    background-color: @color6;
+    background-color: @foreground;
     border-radius: 3px;
 }
 

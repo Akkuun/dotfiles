@@ -51,6 +51,11 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 vesktop : 
 ``yay -S vesktop``
 
+neofetch :
+
+``
+https://github.com/dylanaraps/neofetch.git && cd neoftech && chmod +777 install && make install``
+
 ### 2. Lancer le script d'installation
 
 Le script d'installation applique la configuration de Kitty en utilisant stow. Ouvrez un terminal et exécutez les commandes suivantes :

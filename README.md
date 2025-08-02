@@ -42,6 +42,15 @@ Si ce n'est pas déjà fait, clonez ce dépôt dans votre répertoire `~/dotfile
 git clone https://github.com/Akkuun/dotfiles.git ~/dotfiles
 ```
 
+### 1.2 installation supplémentaires
+
+yay : 
+``
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si``
+
+vesktop : 
+``yay -S vesktop``
+
 ### 2. Lancer le script d'installation
 
 Le script d'installation applique la configuration de Kitty en utilisant stow. Ouvrez un terminal et exécutez les commandes suivantes :

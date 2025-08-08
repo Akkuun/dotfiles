@@ -107,6 +107,6 @@ xxxx
 - Material Icon Theme
 - Night Owl
 - Edit CSV
-- Prettier Code
+- Prettier Code (ctrl + alt + l)
 - Better comments
 

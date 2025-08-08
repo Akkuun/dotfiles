@@ -12,5 +12,7 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmPasteNative": false,
     "explorer.confirmDelete": false,
-    "github.copilot.nextEditSuggestions.enabled": true, // Thème d'icônes (Material)
+    "github.copilot.nextEditSuggestions.enabled": true, // Copilot suggestions
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier as default formatter
+    "editor.formatOnSave": true, // Format on save
 }

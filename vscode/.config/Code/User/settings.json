@@ -11,5 +11,6 @@
     "editor.minimap.enabled": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmPasteNative": false,
-    "explorer.confirmDelete": false, // Thème d'icônes (Material)
+    "explorer.confirmDelete": false,
+    "github.copilot.nextEditSuggestions.enabled": true, // Thème d'icônes (Material)
 }

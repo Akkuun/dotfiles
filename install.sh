@@ -3,7 +3,7 @@
 set -e  # Arrête le script en cas d’erreur
 
 echo "📦 Installation des paquets de base..."
-sudo pacman -Syu --needed git stow kitty neofetch wget unzip curl wofi vesktop-bin imagemagick waybar  pipewire pipewire-pulse wireplumber xdg-desktop-portal-hyprland ttf-nerd-fonts-symbols bluez bluez-utils blueman networkmanager network-manager-applet nemo mpv --noconfirm
+sudo pacman -Syu --needed git stow kitty  wget unzip curl wofi  imagemagick waybar  pipewire pipewire-pulse wireplumber xdg-desktop-portal-hyprland ttf-nerd-fonts-symbols bluez bluez-utils blueman networkmanager network-manager-applet nemo mpv --noconfirm
 
 # Vérifier si yay est installé, sinon l'installer
 if ! command -v yay &> /dev/null; then
@@ -86,3 +86,4 @@ echo "   ➤ hyprctl monitors"
 echo "   ➤ puis ajoutez dans hyprpaper.conf :"
 echo "     wallpaper = NOM-ECRAN,/chemin/vers/fond.jpg"
 echo ""
+

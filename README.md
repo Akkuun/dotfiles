@@ -6,10 +6,10 @@ Ce dépôt contient mes configurations personnelles pour plusieurs outils et app
 
 Ce dépôt inclut la configuration pour les outils suivants :
 
-- **Kitty** (Terminal)
+- **Kitty** (Émulateur de terminal)
+- **Zsh** (Shell avec autocomplétion intelligente)
 - **Wofi** (Outil de barre de recherche d'application)
 - **HyprShot** (Captures d'écran)
-
 - **Hyprpaper** (Outil de gestion de fond d'écran)
 - **Vesktop** (Discord pour Arch)
 - **hellwal** (Modification de la palette de couleur)
@@ -28,6 +28,7 @@ Ce dépôt inclut la configuration pour les outils suivants :
 - **Nemo** (gestionnaire de fichier)
 - **mpv** (lecteur de fichier multimédia)
 - **swaync** (gestionnaire de notification et centre d'opérations)
+- **zsh-autosuggestions** (Plugin d'autocomplétion pour zsh)
 
 ### Prérequis
 

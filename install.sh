@@ -3,7 +3,7 @@
 set -e  # Arrête le script en cas d’erreur
 
 echo "📦 Installation des paquets de base..."
-sudo pacman -Syu --needed git stow kitty  wget unzip curl wofi  imagemagick waybar  pipewire pipewire-pulse wireplumber xdg-desktop-portal-hyprland ttf-nerd-fonts-symbols bluez bluez-utils blueman networkmanager network-manager-applet nemo mpv --noconfirm
+sudo pacman -Syu --needed git stow kitty wget unzip curl wofi imagemagick waybar pipewire pipewire-pulse wireplumber xdg-desktop-portal-hyprland ttf-nerd-fonts-symbols bluez bluez-utils blueman networkmanager network-manager-applet nemo mpv zsh zsh-autosuggestions swaync --noconfirm
 
 # Vérifier si yay est installé, sinon l'installer
 if ! command -v yay &> /dev/null; then
@@ -63,6 +63,7 @@ apply_config "hyprpaper"
 apply_config "waybar" 
 apply_config "neofetch"
 apply_config "swaync"
+apply_config "zsh"
 
 # Rendre les scripts exécutables si présents
 if [ -d "hyprland/.config/hypr/scripts" ]; then

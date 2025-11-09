@@ -5,18 +5,19 @@
     "spacing": 5,
     "modules-left": [
         "hyprland/workspaces"
+        
     ],
     "modules-center": [
         "clock"
     ],
-    "modules-right": [
-        "tray",
-        "bluetooth",
-        "network",
-        "battery",
-        "pulseaudio"
-    ],
-    // LEFT
+    "modules-right": ["tray", "bluetooth", "network", "battery", "pulseaudio"],
+
+    "custom/power": {
+        "format" : "⭘ ",
+        "tooltip": false,
+        "on-click": "wlogout -b 5",
+    },
+
     "hyprland/workspaces": {
         "format": "{windows}",
         "window-rewrite-default": "",
@@ -32,30 +33,28 @@
         "icon-size": 50,
         "on-click": "activate"
     },
-    // RIGHT
-    "custom/power": {
-        "format": "⭘ ",
-        "tooltip": false,
-        "on-click": "wlogout -b 5"
-    },
+
     "tray": {
         "icon-size": 20,
         "spacing": 10,
-        "cursor": true
+        "cursor": true,
     },
+
     "bluetooth": {
         "format": " 󰂯 ",
         "format-disabled": " 󰂲 ",
         "format-connected": " 󰂱 ",
-        "on-click": "blueman-manager"
+        "on-click": "blueman-manager",
     },
+
     "network": {
-        "format-wifi": "    {essid}",
+        "format-wifi": "  {essid}",
         "format-ethernet": "  Ethernet",
         "format-linked": "  Linked (No IP)",
         "format-disconnected": "  Disconnected",
-        "tooltip": false
+        "tooltip": false,
     },
+
     "battery": {
         "states": {
             "good": 85,
@@ -67,18 +66,12 @@
         "format-plugged": " {capacity}%",
         "format-charging": " {capacity}%",
         "format-alt": "{icon} {capacity}%",
-        "format-icons": [
-            " ",
-            " ",
-            " ",
-            " ",
-            " "
-        ],
+        "format-icons": [" ", " ", " ", " ", " "],
         "tooltip-format": "{time}",
-        "cursor": false
+        "cursor": false,
     },
+
     "pulseaudio": {
-        "spacing": 5,
         "format": "{icon} {volume}%",
         "format-muted": "  {volume}%",
         "format-bluetooth": " {volume}%",
@@ -86,11 +79,9 @@
         "format-icons": {
             "headphone": " ",
             "headset": " ",
-            "default": [
-                " "
-            ]
+            "default": [" "],
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
     },
     "clock": {
         "format": "{:%H:%M}  ",

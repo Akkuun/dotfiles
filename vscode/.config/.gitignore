@@ -1,0 +1,10 @@
+# Ignorer tout par défaut
+*
+
+# Mais garder les fichiers de configuration essentiels
+!User/
+!User/settings.json
+!User/keybindings.json
+
+# Garder aussi ce .gitignore
+!.gitignore

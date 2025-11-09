@@ -9,7 +9,7 @@ Ce dépôt inclut la configuration pour les outils suivants :
 - **Kitty** (Terminal)
 - **Wofi** (Outil de barre de recherche d'application)
 - **HyprShot** (Captures d'écran)
-- **Yay** (Outil d'installation de paquet AUR)
+
 - **Hyprpaper** (Outil de gestion de fond d'écran)
 - **Vesktop** (Discord pour Arch)
 - **hellwal** (Modification de la palette de couleur)
@@ -26,7 +26,7 @@ Ce dépôt inclut la configuration pour les outils suivants :
 - **networkmanager network-manager-applet** (Gui Wifi)
 - **Vscode** (Vs code et ses extensions)
 - **Nemo** (gestionnaire de fichier)
-- **mpv** (lecteur de fichier multimédia) 
+- **mpv** (lecteur de fichier multimédia)
 
 ### Prérequis
 
@@ -41,6 +41,20 @@ Si ce n'est pas déjà fait, clonez ce dépôt dans votre répertoire `~/dotfile
 ```bash
 git clone https://github.com/Akkuun/dotfiles.git ~/dotfiles
 ```
+
+### 1.2 installation supplémentaires prérequises
+
+- **Yay** (Outil d'installation de paquet AUR)
+
+`sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si`
+
+- **vesktop** (Discord)
+
+`yay -S vesktop`
+
+neofetch :
+
+`https://github.com/dylanaraps/neofetch.git && cd neoftech && chmod +777 install && make install`
 
 ### 2. Lancer le script d'installation
 
@@ -61,18 +75,17 @@ cd ~/dotfiles
 
 - Rend exécutable les scripts utilisés par le fichier configuration d'hyperland.
 
-
 ### Palette automatique bug
 
 Voici la pipeline concernant la palette automatique si jamais ça marche pas :
 
-- 1) supprimer les dossiers hellwal dans ~/.config/hellwal et ~/.cache/hellwal
+- 1. supprimer les dossiers hellwal dans ~/.config/hellwal et ~/.cache/hellwal
 
-- 2) recréer un dossier dans ~/.config/hellwal  ~/.config/hellwal/templates
+- 2. recréer un dossier dans ~/.config/hellwal ~/.config/hellwal/templates
 
-- 3) dans le dossier hellwal dans ~/dotfiles/hellwal ( cp -r templates ~/.config/hellwal puis make)
+- 3. dans le dossier hellwal dans ~/dotfiles/hellwal ( cp -r templates ~/.config/hellwal puis make)
 
-- 4) une fois que l'executable est mis en place, voici comment ça marche à l'exécution. Hyprpaper met le bon fond d'écran basé sur le path fourni dans hyprpaper.conf ensuite un script applyPalette va executabler hellwal pour correspondre au bon fond et va creer les fichiers de cache. Enfin genereteKittyColorConf va crer le bon fichier de conf pour les couleurs de kitty et le mettre dans les fichiers de conf de kitty
+- 4. une fois que l'executable est mis en place, voici comment ça marche à l'exécution. Hyprpaper met le bon fond d'écran basé sur le path fourni dans hyprpaper.conf ensuite un script applyPalette va executabler hellwal pour correspondre au bon fond et va creer les fichiers de cache. Enfin genereteKittyColorConf va crer le bon fichier de conf pour les couleurs de kitty et le mettre dans les fichiers de conf de kitty. Ensuite une fois les scripts fonctionnels, ils sont lancés à chaque lancement de Arc. Il suffit de faire les commandes à la main présentes dans les scripts et des les relancer.
 
 Si jamais ça marche pas -> en gros l'idée c'est de récrée pour chaque image les fichiers de cache et config avec ./hellwal à la main. Après les scripts marcherons une fois que les fichiers seront créé dans le cache une première fois.
 
@@ -83,3 +96,31 @@ sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
+
+### Font
+
+xxxx
+
+### Extensions VSCODE
+
+- Material Icon Theme
+- Night Owl
+- Edit CSV
+- Prettier Code (ctrl + alt + l)
+- Better comments
+
+### VS CODE Shortcuts
+
+`Ctrl + PageUp / PageDown ` : Parcourir fichier
+
+`Alt + 1/2/3...` : Changer d'onglet
+
+`Ctrl + P` : Aller à un fichier
+
+`Ctrl + Maj + Flèche ` : Selection multiples de lignes
+
+`Ctrl + Alt + l ` : reformater
+
+`Ctrl + J ` : Ourvrir /fermer terminal
+
+` Ctrl + Shift + (` Split terminal

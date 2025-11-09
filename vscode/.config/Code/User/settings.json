@@ -11,5 +11,8 @@
     "editor.minimap.enabled": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmPasteNative": false,
-    "explorer.confirmDelete": false, // Thème d'icônes (Material)
+    "explorer.confirmDelete": false,
+    "github.copilot.nextEditSuggestions.enabled": true, // Copilot suggestions
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier as default formatter
+    "editor.formatOnSave": true, // Format on save
 }

@@ -29,6 +29,15 @@ else
   echo "✅ Hyprpaper est déjà installé."
 fi
 
+#Installer swaync via yay (si pas déjà installé)
+if ! command -v swaync &> /dev/null; then
+  echo "📅 Installation de Swaync..."
+  yay -S swaync --noconfirm
+else
+  echo "✅ Swaync est déjà installé."
+fi
+
+
 echo "📁 Création du dossier ~/.config si nécessaire..."
 mkdir -p ~/.config
 
@@ -53,6 +62,7 @@ apply_config "hyprland"
 apply_config "hyprpaper" 
 apply_config "waybar" 
 apply_config "neofetch"
+apply_config "swaync"
 
 # Rendre les scripts exécutables si présents
 if [ -d "hyprland/.config/hypr/scripts" ]; then

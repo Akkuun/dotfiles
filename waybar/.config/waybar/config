@@ -53,6 +53,7 @@
         "format-linked": "  Linked (No IP)",
         "format-disconnected": "  Disconnected",
         "tooltip": false,
+        "on-click": "swaync-client -t -sw"
     },
 
     "battery": {
@@ -84,7 +85,7 @@
         "on-click": "pavucontrol",
     },
     "clock": {
-        "format": "{:%H:%M}  ",
+        "format": "{:%H:%M}  ",
         "tooltip-format": "\n<span font_family='Relaxed Typing Mono JP' size='9000'>{calendar}</span>",
         "calendar": {
             "mode": "year",

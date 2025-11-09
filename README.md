@@ -27,6 +27,7 @@ Ce dépôt inclut la configuration pour les outils suivants :
 - **Vscode** (Vs code et ses extensions)
 - **Nemo** (gestionnaire de fichier)
 - **mpv** (lecteur de fichier multimédia)
+- **swaync** (gestionnaire de notification et centre d'opérations)
 
 ### Prérequis
 
@@ -89,6 +90,8 @@ Voici la pipeline concernant la palette automatique si jamais ça marche pas :
 
 Si jamais ça marche pas -> en gros l'idée c'est de récrée pour chaque image les fichiers de cache et config avec ./hellwal à la main. Après les scripts marcherons une fois que les fichiers seront créé dans le cache une première fois.
 
+Si tout fonctionne on devrait avoir la palette automatique située ici : ~/.cache/hellwal/waybar-colors.css
+
 ### Services
 
 Faire attention à bien lancer les services :
@@ -99,7 +102,7 @@ sudo systemctl start NetworkManager
 
 ### Font
 
-xxxx
+
 
 ### Extensions VSCODE
 
